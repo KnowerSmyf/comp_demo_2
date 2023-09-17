@@ -3,7 +3,7 @@
 #SBATCH --ntasks=1 
 #SBATCH --gres=gpu:1 
 #SBATCH --partition=vgpu 
-#SBATCH --job-name=“COMP3710 demo” 
+#SBATCH --job-name="COMP3710 demo"
 #SBATCH --mail-user=s4745275@student.uq.edu.au
 #SBATCH --mail-type=ALL 
 #SBATCH -e test_err.txt
