@@ -150,7 +150,7 @@ def ResNet18():
 
 # %%
 model = ResNet18()
-model = model.to(device)
+model = model.to(device).half()
 
 # print("Model No. of Parameters:", sum([param.nelement() for param in model.parameters()]))
 # print(model)
