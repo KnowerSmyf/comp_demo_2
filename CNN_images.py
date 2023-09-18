@@ -162,7 +162,7 @@ def testing(model, epoch):
         correct = 0
         total = 0
         for images, labels in test_loader:
-            images = images.to(device) # added this 
+            images = images.to(device).half() # added this 
             labels = labels.to(device) # added this
             outputs = model(images)
             _, predicted = torch.max(outputs.data, 1)
@@ -198,7 +198,7 @@ start = time.time()
 for epoch in range(num_epochs):
     model.train()
     for i, (images, labels) in enumerate(train_loader):
-        images = images.to(device)
+        images = images.to(device).half()
         labels = labels.to(device)
 
         # Forawrd pass
@@ -245,7 +245,7 @@ with torch.no_grad():
     correct = 0
     total = 0
     for images, labels in test_loader:
-        images = images.to(device) # added this 
+        images = images.to(device).half() # added this 
         labels = labels.to(device) # added this
         outputs = model(images)
         _, predicted = torch.max(outputs.data, 1)
